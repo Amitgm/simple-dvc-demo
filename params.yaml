@@ -1,17 +1,17 @@
 base:
   project: winequality-project
   random_state: 42
-  target_col: TARGET
+  target_col: quality
 
 data_source:
-  s3_source: data_given/winequality.csv
+  s3_source: data_given/winequalityN.csv
 
 load_data:
-  raw_dataset_csv: data/raw/winequality.csv
+  raw_dataset_csv: data/raw/winequalityN.csv
 
 split_data:
-  train_path: data/processed/train_winequality.csv
-  test_path: data/processed/test_winequality.csv
+  train_path: data/processed/train_winequalityN.csv
+  test_path: data/processed/test_winequalityN.csv
   test_size: 0.2
 
 estimators:
