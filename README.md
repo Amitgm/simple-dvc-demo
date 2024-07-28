@@ -30,7 +30,26 @@ git remote add origin https://github.com/Amitgm/simple-dvc-demo
 git branch -M main
 git push origin main
 
+tox command-
 
+'''bash
+tox
+'''
+
+for rebuilding
+'''bash
+tox -r
+'''
+
+pytest -v
+
+setup commands -
+pip install -e .
+
+build your own package commands
+'''bash
+python setup.py sdist bdist wheel
+'''bash
 
 
 <!-- dvc metrics show -->
