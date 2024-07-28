@@ -35,3 +35,5 @@ git push origin main
 
 <!-- dvc metrics show -->
 <!-- dvc metrics diff -->
+
+<!-- pip install -e . -->
