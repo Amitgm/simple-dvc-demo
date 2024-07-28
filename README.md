@@ -1,6 +1,13 @@
 create env
 conda create -n wineq python=3.7 -y
 
+Install dvc version 2.10.2,
+Check which dvc is used (the one in venv),
+Check fsspec version number (== 2023.1.0),
+Force reinstall to downgrade fsspec to 2022.11.0,
+Check fsspec version number again (== 2022.11.0), and
+Force initialize dvc since there is an existing .dvc folder in the project directory.
+
 activate env
 conda activate wineq
 
