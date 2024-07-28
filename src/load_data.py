@@ -16,6 +16,14 @@ def load_and_save(config_path):
 
     raw_data_path = config["load_data"]["raw_dataset_csv"]
 
+    df.drop("type",axis=1,inplace=True)
+
+    df.dropna(inplace=True)
+
+    new_cols.remove("type")
+
+    print(new_cols)
+
     df.to_csv(raw_data_path, sep=",", index=False, header = new_cols)
 
     print(df.head())
