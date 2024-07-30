@@ -52,6 +52,30 @@ python setup.py sdist bdist wheel
 '''bash
 
 
+----
+mlflow server command
+
+mlflow server \
+
+    <!-- storing the data in mlflow db -->
+    --backend-store-uri sqlite:///mlflow.db \
+    <!-- storing the model part -->   
+     <!-- create an artifacts folder for this  -->
+    --default-artifact-root ./artifacts \
+    --host 0.0.0.0 -p 1234
+
+
+
+mlflow server \
+
+    --backend-store-uri sqlite:///mlflow.db \
+    --default-artifact-root ./artifacts \
+    --host 0.0.0.0 -p 1234
+
+    --host 127.0.0.1 -p 5000
+    
+
+
 <!-- dvc metrics show -->
 <!-- dvc metrics diff -->
 
