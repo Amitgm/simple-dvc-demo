@@ -41,7 +41,7 @@ def predict(data):
 
     try:
 
-        if 3 <= prediction <= 8:
+        if 1 <= prediction <= 100:
             return prediction
         else:
 

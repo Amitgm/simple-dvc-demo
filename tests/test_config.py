@@ -51,25 +51,27 @@ input_data = {
     }
 }
 
-quality_range = {
-    "min": 3.0,
-    "max": 8.0
+TARGET_range = {
+    "min": 1.0,
+    "max": 100.0
 }
 
 
-def test_form_response_correct_range(data = input_data["correct_range"]):
+def test_form_response_correct_range(data=input_data["correct_range"]):
 
     res = form_response(data)
 
-    assert quality_range["min"] <= res <= quality_range["max"]
+    print("the response",res)
 
+    assert  TARGET_range["min"] <= res <= TARGET_range["max"]
 
-def test_api_response_correct_range(data = input_data["correct_range"]):
+def test_api_response_correct_range(data=input_data["correct_range"]):
 
     res = api_response(data)
 
-    assert quality_range["min"] <= res["response"] <= quality_range["max"]
+    print("the response api",res)
 
+    assert  TARGET_range["min"] <= res["response"] <= TARGET_range["max"]
 
 def test_form_response_incorrect_range(data = input_data["incorrect_range"]):
 
