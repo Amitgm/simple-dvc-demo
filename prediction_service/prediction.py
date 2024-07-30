@@ -115,8 +115,20 @@ def api_response(dict_request):
 
                 return response
         
-    except Exception as e:
+    except NotInRange as e:
 
         response = {"The expected range": get_schema(), "response": str(e)}
+
+        return response
+
+    except NotInCols as e:
+
+        response = {"The expected cols": get_schema().keys(), "response": str(e)}
+
+        return response
+
+    except Exception as e:
+
+        response = {"response": str(e)}
 
         return response
