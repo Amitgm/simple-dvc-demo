@@ -75,6 +75,8 @@ mlflow server \
     --host 127.0.0.1 -p 5000
     
 
+To do github actions for another branch, specify branch name in ci-cd.yaml
+
 
 <!-- dvc metrics show -->
 <!-- dvc metrics diff -->
